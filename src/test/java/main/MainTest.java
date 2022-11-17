@@ -6,6 +6,7 @@ import org.junit.jupiter.api.Test;
 
 import java.io.ByteArrayOutputStream;
 import java.io.PrintStream;
+import java.util.NoSuchElementException;
 import java.util.Scanner;
 
 import static org.junit.jupiter.api.Assertions.*;
@@ -103,19 +104,12 @@ class MainTest {
         assertEquals(0, Main.division(new int[]{0, 7}));
     }
 
-//  Baszakodás
-//    @Test
-//    @DisplayName("readSecondNumberTest1")
-//    public void readSecondNumberTest1() {
-////        int secondNum = 1;
-//        new Scanner("1");
-//        assertEquals("", byteArrayOutputStream.toString().trim());
-//    }
-//
-//    @Test
-//    @DisplayName("readSecondNumberTest2")
-//    public void readSecondNumberTest2() {
-//        assertEquals(0, new Scanner(1));
-//    }
+    @Test
+    @DisplayName("readSecondNumberTest1")
+    public void readSecondNumberTest1() {
+        assertNotEquals(0, Main.readSecondNumber(new Scanner("0")));
+    }
+
+
 
 }
